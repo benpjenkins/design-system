@@ -1,21 +1,21 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// export const Button = styled.a`
-//   /* This renders the buttons above... Edit me! */
-//   display: inline-block;
-//   border-radius: 3px;
-//   padding: 0.5rem 0;
-//   margin: 0.5rem 1rem;
-//   width: 11rem;
-//   background: transparent;
-//   color: white;
-//   border: 2px solid white;
-//   ${(props) =>
-//     props.primary &&
-//     css`
-//       background: white;
-//       color: black;
-//     `}
-// `;
+interface Props {
+  disabled?: boolean;
+}
 
-// export default Button;
+export const Button = styled.button<Props>`
+  background-color: ${(props) => (props.disabled ? "grey" : "#1f5e29")};
+  border-color: #1f5e29;
+  color: white;
+  height: 40px;
+  width: 140px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: ${(props) => (props.disabled ? "grey" : "#247532")};
+  }
+`;
+
+export default Button;
