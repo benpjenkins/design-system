@@ -20,6 +20,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["src"],
+  "include": ["src", "stories/button.stories.tsx"],
   "exclude": ["node_modules", "build"]
 }
