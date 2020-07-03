@@ -1,10 +1,12 @@
+import React from "react";
 import styled from "styled-components";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLButtonElement> {
   disabled?: boolean;
+  text: string;
 }
 
-export const Button = styled.button<Props>`
+const StyledButton = styled.button`
   background-color: ${(props) => (props.disabled ? "grey" : "#1f5e29")};
   border-color: #1f5e29;
   color: white;
@@ -17,5 +19,10 @@ export const Button = styled.button<Props>`
     background-color: ${(props) => (props.disabled ? "grey" : "#247532")};
   }
 `;
+
+export const Button = (props: Props): JSX.Element => {
+  const { disabled, text } = props;
+  return <StyledButton disabled={disabled}>{text}</StyledButton>;
+};
 
 export default Button;
