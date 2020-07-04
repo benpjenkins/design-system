@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface Props extends React.HTMLProps<HTMLButtonElement> {
   disabled?: boolean;
-  text: string;
+  children?: string;
 }
 
 const StyledButton = styled.button`
@@ -21,8 +21,8 @@ const StyledButton = styled.button`
 `;
 
 export const Button = (props: Props): JSX.Element => {
-  const { disabled, text } = props;
-  return <StyledButton disabled={disabled}>{text}</StyledButton>;
+  const { disabled, children } = props;
+  return <StyledButton disabled={disabled}>{children}</StyledButton>;
 };
 
 export default Button;

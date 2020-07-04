@@ -4,10 +4,10 @@ import { Button } from "./index";
 
 export default { title: "Button" };
 
-export const withText = (): React.FC => {
+export const withText = (): React.ReactNode => {
   return <Button>Hello World</Button>;
 };
 
-export const disabled = (): React.FC => {
+export const disabled = (): React.ReactNode => {
   return <Button disabled={true}>Disabled</Button>;
 };
