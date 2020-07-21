@@ -9,7 +9,7 @@ export const primaryDefault = (): React.ReactNode => {
 };
 
 export const secondary = (): React.ReactNode => {
-  return <Button variant="secondary">Secondary</Button>;
+  return <Button>Secondary</Button>;
 };
 
 export const disabled = (): React.ReactNode => {

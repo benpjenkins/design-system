@@ -1,3 +1,3 @@
-export default "Hello World";
+import "./assets/main.css";
 
-export * from "./utils";
+export default "Hello World";
