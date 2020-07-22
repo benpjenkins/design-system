@@ -1,38 +1,25 @@
 import React from "react";
+
 import "../../assets/main.css";
-
-// type Variant =
-//   | "primary"
-//   | "secondary"
-//   | "success"
-//   | "warning"
-//   | "danger"
-//   | "info"
-//   | "dark";
-
-// interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-//   size?: "small" | "medium" | "large";
-//   variant?: Variant;
-//   // will probably remove background color once variant functionality is fleshed out
-//   backgroundColor?: string;
-//   disabled?: boolean;
-//   theme: any;
-// }
-
-// const buttonSizes = {
-//   small: {
-//     height: "40px",
-//     width: "140px",
-//   },
-// };
+import defaultTheme from "../../constants";
 
 interface ButtonProps {
-  children: string;
+  children?: string;
+  variant?: string;
+  disabled?: boolean;
+  onClick: () => any;
 }
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button = (props: ButtonProps): JSX.Element => {
+  const { children, variant, onClick } = props;
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      onClick={onClick}
+      className={`bg-${defaultTheme[variant] || "blue"}-500 hover:bg-${
+        defaultTheme[variant] || "blue"
+      }-700 text-white font-bold py-2 px-4 rounded`}
+      {...props}
+    >
       {children}
     </button>
   );

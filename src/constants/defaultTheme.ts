@@ -1,9 +1,9 @@
 export const defaultTheme = {
-  primary: "#2ca1db",
-  secondary: "#112047",
-  success: "",
-  warning: "",
-  danger: "",
+  primary: "blue",
+  secondary: "purple",
+  success: "green",
+  warning: "yellow",
+  danger: "red",
   info: "",
   dark: "",
 };
